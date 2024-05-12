@@ -12,20 +12,22 @@ export class SharePointService {
     constructor( context: any) {
         this.context = context;
     }
-    public _getCategoryItems(): Promise<any[]> {
-        const url = `${this.context.pageContext.web.absoluteUrl}/_api/web/lists/getByTitle('Categories')/items`;
+    public _getListItems(listName:string): Promise<any[]> {
+        const url = `${this.context.pageContext.web.absoluteUrl}/_api/web/lists/getByTitle('${listName}')/items`;
         return this.context.spHttpClient.get(url, SPHttpClient.configurations.v1)
           .then(async (response: SPHttpClientResponse) => {
             if (response.ok) {
               const data = await response.json();
+              console.log(data.value);
+              
             return data.value;
             } else {
-              console.error(`Failed to fetch items from Category list. Error: ${response.statusText}`);
+              console.error(`Failed to fetch items from ${listName} list. Error: ${response.statusText}`);
               return [];
             }
           })
           .catch((error:Error) => {
-            console.error('Error fetching items from Category list:', error);
+            console.error(`Error fetching items from ${listName} list:`, error);
             return [];
           });
       }
