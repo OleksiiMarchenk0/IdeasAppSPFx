@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.2",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.2",
+    "libraryName": "ideas-portal",
+    "libraryId": "d298b80d-5efa-41cb-9403-1f5b25bb6568",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "ideas-portal",
+    "solutionShortDescription": "ideas-portal description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

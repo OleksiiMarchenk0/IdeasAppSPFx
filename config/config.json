@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "ideas-portal-web-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/ideasPortalWebPart/IdeasPortalWebPartWebPart.js",
+          "manifest": "./src/webparts/ideasPortalWebPart/IdeasPortalWebPartWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "IdeasPortalWebPartWebPartStrings": "lib/webparts/ideasPortalWebPart/loc/{locale}.js"
+  }
+}
